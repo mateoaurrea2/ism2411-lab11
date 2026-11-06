@@ -1,3 +1,14 @@
+# Reflection
+# 1. I'd use .get() any time a key might not be there, like optional fields
+#    or customer data that isn't complete, since it gives a default instead of
+#    crashing. Bracket notation is better when the key should always exist,
+#    because if it's missing, I want the error so I know something's wrong.
+#    My rule of thumb: .get() if missing is normal, brackets if missing is a bug.
+#
+# 2. This is basically SUMIF or a pivot table in Excel, adding up totals by
+#    category. The Python version is more useful for big datasets because it can
+#    handle way more rows without slowing down, and once it's written I can
+#    rerun it on new data without rebuilding anything by hand.
 # Exercise 1: one customer
 customer = {
     "name": "Jordan Lee",
